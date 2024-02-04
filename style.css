@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5rem;
+    min-height: 200vh;
+}
+
+.outer_container{
+    border: 3px dashed #000;
+    width: 75vw;
+    height: 85vw;
+    margin: 40px auto;
+    position: relative;
+}
+
+.inner_container{
+    border: 2px solid blue;
+    height: 50vh;
+    width: 40vw;
+    margin: 200px auto;
+
+}
+
+.box{
+    width: 150px;
+    height: 150px;
+    color: white;
+    padding: 1rem;
+}
+
+.absolute{
+    background-color: aqua;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+}
+/* absolute itu bergantung pada parent terdekatnya dalam hal ini inner_container dan pasti di dalam parent*/
+/* kalau tidak ada setting di parent, akan ngikut sesuai default browser  */
+
+.relatives{
+    background-color: red;
+    position: relative;
+    top: 300px;
+    left: 100px;
+}
+/* relative itu bergantung pada parent nya hanya saja posisi dapat berubah
+sesuai ukuran browser */
+
+.fixed{
+    background-color: yellow;
+    position: fixed;
+    top: 270px;
+    left: 100px;
+}
+/* fixed itu posisi nya tidak akan berubah meskipun kita scroll halaman webnya */
+
+.sticky{
+    background-color: #333;
+    position: sticky;
+
+}
+/* sticky itu posisinya seperti fixed hanya saja masih masuk flow web.  */
